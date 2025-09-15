@@ -1,6 +1,6 @@
-import { ColorModeButton } from "@/components/ui/color-mode";
 import { Button, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import { ColorModeButton } from "@/components/ui/color-mode";
 
 const Demo = () => {
   return (
@@ -14,7 +14,7 @@ const Demo = () => {
         priority
       />
 
-      <Button>Button click me!</Button>
+      <Button shadow="2xl">Button click me!</Button>
       <Text color="primary" fontSize={"xl"}>🍋 Danger Zone</Text>
       <ColorModeButton />
     </HStack>
