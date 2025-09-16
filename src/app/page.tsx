@@ -1,6 +1,7 @@
+import LocalizationBanner from "@app/components/localizationBanner";
 import { Button, HStack, Text } from "@chakra-ui/react";
+import { ColorModeButton } from "@components/ui/color-mode";
 import Image from "next/image";
-import { ColorModeButton } from "@/components/ui/color-mode";
 
 const Demo = () => {
   return (
@@ -15,7 +16,9 @@ const Demo = () => {
       />
 
       <Button shadow="2xl">Button click me!</Button>
-      <Text color="primary" fontSize={"xl"}>🍋 Danger Zone</Text>
+      <Text color="primary" fontSize={"xl"}>
+        🍋 Danger Zone
+      </Text>
       <ColorModeButton />
     </HStack>
   );
@@ -24,6 +27,7 @@ const Demo = () => {
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <LocalizationBanner country="US" onCountryChange={() => {}} />
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
