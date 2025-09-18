@@ -1,24 +1,7 @@
-import { Box, Container, HStack, Link, Text } from "@chakra-ui/react";
-import Ticket from "@components/brand/ticket.svg";
+import HeaderBarMenuItem from "@app/components/headerBarMenuItem";
+import { Container, HStack, Link } from "@chakra-ui/react";
+import CombinationMark from "@components/brand/combinationMark";
 import { ColorModeButton } from "@components/ui/color-mode";
-
-function HeaderBarMenuItem({ label, href }: { label: string; href: string }) {
-  return (
-    <Link
-      href={href}
-      color="link"
-      transition="all 0.2s ease-in-out"
-      fontSize="lg"
-      _hover={{
-        textDecoration: "underline",
-        transform: "scale(1.05)",
-        color: "link-hover",
-      }}
-    >
-      {label}
-    </Link>
-  );
-}
 
 export default function HeaderBar() {
   return (
@@ -30,19 +13,7 @@ export default function HeaderBar() {
           transform: "scale(1.05)",
         }}
       >
-        <HStack>
-          <Box bg="link" padding="1" borderRadius="lg">
-            <Ticket fill={"var(--chakra-colors-link)"} stroke={"var(--chakra-colors-text-primary)"} />
-          </Box>
-          <Text
-            fontSize="2xl"
-            fontWeight="bold"
-            color="text-primary"
-            fontFamily="heading"
-          >
-            Fixline
-          </Text>
-        </HStack>
+        <CombinationMark />
       </Link>
 
       <HStack gap="4">
