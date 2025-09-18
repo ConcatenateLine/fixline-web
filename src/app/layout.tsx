@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@app/globals.css";
 import { ColorModeProvider } from "@components/ui/color-mode";
 import { Provider } from "@components/ui/provider";
 import type { Metadata } from "next";
@@ -30,9 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Provider>
-          <ColorModeProvider>
-            {children}
-          </ColorModeProvider>
+          <ColorModeProvider>{children}</ColorModeProvider>
         </Provider>
       </body>
     </html>
