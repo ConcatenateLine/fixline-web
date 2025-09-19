@@ -1,23 +1,23 @@
-import { HStack, Text } from "@chakra-ui/react";
-import DoneSvg from "@components/brand/done.svg";
+import { HStack, Icon, Text } from "@chakra-ui/react";
 
 interface MessagePillProps {
   message: string;
+  icon: React.ReactNode;
 }
 
-export default function MessagePill({ message }: MessagePillProps) {
+export default function MessagePill({ message, icon }: MessagePillProps) {
   return (
     <HStack
-      width="2/6"
       gap="paragraph"
       justifyContent="center"
       alignItems="center"
       bg="bg-surface"
-      padding="2"
+      paddingX="4"
+      paddingY="2"
       borderRadius="full"
       boxShadow="md"
     >
-      <DoneSvg stroke="var(--chakra-colors-text-primary)" />
+      <Icon>{icon}</Icon>
       <Text fontSize="md" color="text-primary">
         {message}
       </Text>

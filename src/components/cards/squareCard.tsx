@@ -22,7 +22,7 @@ export default function SquareCard({ icon, value, label }: SquareCardProps) {
         padding="cardPadding"
       >
         <Box padding="iconPadding" bg="secondary-accent" rounded="md">
-          <Icon size="xl" stroke="var(--chakra-colors-text-primary)">
+          <Icon size="xl" stroke="var(--chakra-colors-primary-accent)">
             {icon}
           </Icon>
         </Box>

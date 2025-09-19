@@ -92,6 +92,7 @@ const config = defineConfig({
         "16": { value: "4rem" },
         "20": { value: "5rem" },
         "24": { value: "6rem" },
+        "28": { value: "7rem" },
         "32": { value: "8rem" },
         "40": { value: "10rem" },
         "48": { value: "12rem" },
@@ -367,6 +368,11 @@ const config = defineConfig({
         },
       },
       spacing: {
+        page: {
+          value: "spacing.28",
+          description:
+            "Vertical spacing between elements or sections on a page",
+        },
         stack: {
           value: "spacing.6",
           description:

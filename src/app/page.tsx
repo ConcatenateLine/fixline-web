@@ -1,10 +1,12 @@
+import Features from "@app/components/features";
 import HeaderBar from "@app/components/headerBar";
 import HeroSection from "@app/components/heroSection";
-import { Box } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
+import ScrollIndicator from "@components/interactions/ScrollIndicator";
 
 export default function Home() {
   return (
-    <Box height="100vh" bg="bg-canvas" gap="section">
+    <Box height="100vh" bg="bg-canvas">
       <Box position="absolute" width="100vw" height="100vh">
         <Box
           height="30vh"
@@ -38,9 +40,11 @@ export default function Home() {
         />
       </Box>
       <HeaderBar />
-      <HeroSection />
-      {/* <Features />
-      <Pricing />
+      <Stack gap="page">
+        <HeroSection />
+        <Features />
+      </Stack>
+      {/*      <Pricing />
       <Testimonials />
       <Footer /> */}
     </Box>

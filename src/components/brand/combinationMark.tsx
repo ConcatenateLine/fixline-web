@@ -7,7 +7,7 @@ export default function CombinationMark() {
       <Box bg="secondary-accent" padding="1" borderRadius="lg">
         <Ticket
           fill="var(--chakra-colors-secondary-accent)"
-          stroke="var(--chakra-colors-text-primary)"
+          stroke="var(--chakra-colors-primary-accent)"
         />
       </Box>
       <Text
