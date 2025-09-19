@@ -4,10 +4,10 @@ import Ticket from "@components/brand/ticket.svg";
 export default function CombinationMark() {
   return (
     <HStack>
-      <Box bg="link" padding="1" borderRadius="lg">
+      <Box bg="secondary-accent" padding="1" borderRadius="lg">
         <Ticket
-          fill={"var(--chakra-colors-link)"}
-          stroke={"var(--chakra-colors-text-primary)"}
+          fill="var(--chakra-colors-secondary-accent)"
+          stroke="var(--chakra-colors-text-primary)"
         />
       </Box>
       <Text

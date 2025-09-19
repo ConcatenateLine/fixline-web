@@ -16,7 +16,7 @@ export default function HeaderBar() {
         <CombinationMark />
       </Link>
 
-      <HStack gap="4">
+      <HStack gap="stack">
         <HeaderBarMenuItem label="Home" href="#home" />
         <HeaderBarMenuItem label="Features" href="#features" />
         <HeaderBarMenuItem label="How it works" href="#how-it-works" />

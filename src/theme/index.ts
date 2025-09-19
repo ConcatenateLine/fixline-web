@@ -104,6 +104,45 @@ const config = defineConfig({
     },
     semanticTokens: {
       colors: {
+        "primary-brand": {
+          value: {
+            base: "colors.brand.400",
+            _dark: "colors.brand.300",
+            description: "The primary brand color used for brand elements.",
+          },
+        },
+        "primary-accent": {
+          value: {
+            base: "colors.red.500",
+            _dark: "colors.red.400",
+            description: "The primary accent color used for accent elements.",
+          },
+        },
+        "secondary-accent": {
+          value: {
+            base: "color-mix(in oklab, {colors.red.400} 20%, {colors.cream})",
+            _dark:
+              "color-mix(in oklab, {colors.red.700} 10%, {colors.gray.900})",
+            description:
+              "The secondary accent color used for muted accent elements.",
+          },
+        },
+        "secondary-brand": {
+          value: {
+            base: "color-mix(in oklab, {colors.brand.400} 20%, {colors.cream})",
+            _dark:
+              "color-mix(in oklab, {colors.brand.700} 10%, {colors.gray.900})",
+            description:
+              "The secondary brand color used for muted brand elements.",
+          },
+        },
+        "transparent-blur": {
+          value: {
+            base: "color-mix(in oklab, {colors.cream} 60%, transparent)",
+            _dark: "color-mix(in oklab, {colors.gray.900} 60%, transparent)",
+            description: "Transparent color with blur effect.",
+          },
+        },
         "bg-canvas": {
           value: {
             base: "colors.cream",
@@ -128,26 +167,13 @@ const config = defineConfig({
               "A secondary surface background, used for nested or subtle container differentiation.",
           },
         },
-        "border-subtle": {
+        "bg-surface-alt": {
           value: {
-            base: "colors.gray.200",
-            _dark: "colors.gray.700",
+            base: "colors.gray.800",
+            _dark: "colors.white",
             description:
-              "A subtle border color for non-critical dividers and outlines.",
+              "The inverted background color for cards, modals, and other UI surfaces.",
           },
-        },
-        "border-emphasized": {
-          value: {
-            base: "colors.gray.300",
-            _dark: "colors.gray.600",
-            description:
-              "A more visible border color for important separators or interactive elements.",
-          },
-        },
-        "border-focus": {
-          value: { base: "colors.blue.500", _dark: "colors.blue.300" },
-          description:
-            "Border color for focused elements like text inputs and buttons.",
         },
         "text-primary": {
           value: {
@@ -160,7 +186,8 @@ const config = defineConfig({
           value: {
             base: "colors.cream",
             _dark: "colors.black",
-            description: "Alternative primary text color for body copy and headings.",
+            description:
+              "Alternative primary text color for body copy and headings.",
           },
         },
         "text-secondary": {
@@ -337,6 +364,99 @@ const config = defineConfig({
             _light: "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
             _dark: "inset 0 2px 4px 0 rgb(255 255 255 / 0.05)",
           },
+        },
+      },
+      spacing: {
+        stack: {
+          value: "spacing.6",
+          description:
+            "Vertical spacing between stacked components (e.g. cards, form fields)",
+        },
+        section: {
+          value: "spacing.8",
+          description: "Vertical spacing between major layout sections",
+        },
+        listItem: {
+          value: "spacing.2",
+          description: "Spacing between items in a vertical list",
+        },
+        formGroup: {
+          value: "spacing.4",
+          description: "Vertical spacing between grouped form fields",
+        },
+        paragraph: {
+          value: "spacing.3",
+          description: "Spacing between paragraphs or text blocks",
+        },
+
+        horizontalStack: {
+          value: "spacing.4",
+          description:
+            "Horizontal spacing between inline components (e.g. buttons, icons)",
+        },
+        horizontalSection: {
+          value: "spacing.6",
+          description:
+            "Horizontal spacing between layout sections in a grid or row",
+        },
+        horizontalListItem: {
+          value: "spacing.3",
+          description: "Spacing between items in a horizontal list or carousel",
+        },
+        buttonGroup: {
+          value: "spacing.2",
+          description: "Spacing between horizontally aligned buttons",
+        },
+        iconText: {
+          value: "spacing.2",
+          description: "Spacing between an icon and its adjacent text",
+        },
+
+        containerPadding: {
+          value: "spacing.6",
+          description: "Default padding inside layout containers",
+        },
+        cardPadding: {
+          value: "spacing.5",
+          description: "Internal padding for card components",
+        },
+        modalSpacing: {
+          value: "spacing.7",
+          description: "Spacing between modal content blocks",
+        },
+        alertSpacing: {
+          value: "spacing.3",
+          description: "Spacing between alert icon and message",
+        },
+        iconPadding: {
+          value: "spacing.2",
+          description: "Padding for icons in cards and other components",
+        },
+      },
+      borders: {
+        "border-subtle": {
+          value: {
+            base: "1px solid {colors.gray.200}",
+            _dark: "1px solid {colors.gray.700}",
+            description:
+              "A subtle border color for non-critical dividers and outlines.",
+          },
+        },
+        "border-emphasized": {
+          value: {
+            base: "1px solid {colors.gray.300}",
+            _dark: "1px solid {colors.gray.600}",
+            description:
+              "A more visible border color for important separators or interactive elements.",
+          },
+        },
+        "border-focus": {
+          value: {
+            base: "1px solid {colors.blue.500}",
+            _dark: "1px solid {colors.blue.300}",
+          },
+          description:
+            "Border color for focused elements like text inputs and buttons.",
         },
       },
     },

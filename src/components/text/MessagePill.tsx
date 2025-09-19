@@ -9,7 +9,7 @@ export default function MessagePill({ message }: MessagePillProps) {
   return (
     <HStack
       width="2/6"
-      gap={2}
+      gap="paragraph"
       justifyContent="center"
       alignItems="center"
       bg="bg-surface"
@@ -17,7 +17,7 @@ export default function MessagePill({ message }: MessagePillProps) {
       borderRadius="full"
       boxShadow="md"
     >
-      <DoneSvg stroke={"var(--chakra-colors-text-primary)"} />
+      <DoneSvg stroke="var(--chakra-colors-text-primary)" />
       <Text fontSize="md" color="text-primary">
         {message}
       </Text>
