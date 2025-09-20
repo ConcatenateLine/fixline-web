@@ -369,22 +369,18 @@ const config = defineConfig({
       },
       spacing: {
         page: {
-          value: "spacing.28",
+          value: "spacing.12",
           description:
             "Vertical spacing between elements or sections on a page",
-        },
-        stack: {
-          value: "spacing.6",
-          description:
-            "Vertical spacing between stacked components (e.g. cards, form fields)",
         },
         section: {
           value: "spacing.8",
           description: "Vertical spacing between major layout sections",
         },
-        listItem: {
-          value: "spacing.2",
-          description: "Spacing between items in a vertical list",
+        stack: {
+          value: "spacing.6",
+          description:
+            "Vertical spacing between stacked components (e.g. cards, form fields)",
         },
         formGroup: {
           value: "spacing.4",
@@ -393,6 +389,10 @@ const config = defineConfig({
         paragraph: {
           value: "spacing.3",
           description: "Spacing between paragraphs or text blocks",
+        },
+        listItem: {
+          value: "spacing.2",
+          description: "Spacing between items in a vertical list",
         },
 
         horizontalStack: {
@@ -418,9 +418,13 @@ const config = defineConfig({
           description: "Spacing between an icon and its adjacent text",
         },
 
+        layoutPadding: {
+          value: "spacing.8",
+          description: "Default padding inside layout containers",
+        },
         containerPadding: {
           value: "spacing.6",
-          description: "Default padding inside layout containers",
+          description: "Default padding inside containers",
         },
         cardPadding: {
           value: "spacing.5",

@@ -7,7 +7,7 @@ export default function HeroActions() {
       <Button colorScheme="primary" variant="solid" size="2xl" rounded="xl">
         Get Started
       </Button>
-      <Button colorScheme="primary" variant="outline" size="2xl" rounded="xl">
+      <Button colorScheme="primary" variant="outline" size="2xl" rounded="xl" borderWidth="2px">
         <BookOpen />
         Learn More
       </Button>

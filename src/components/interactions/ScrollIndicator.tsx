@@ -1,23 +1,19 @@
-import { Box, Icon } from "@chakra-ui/react";
+import { Box, Icon, Portal } from "@chakra-ui/react";
 import { Mouse } from "lucide-react";
 
-interface ScrollIndicatorProps {
-  bottom?: string;
-}
-
-export default function ScrollIndicator({
-  bottom = "-10",
-}: ScrollIndicatorProps) {
+export default function ScrollIndicator() {
   return (
-    <Box
-      position="absolute"
-      left="50%"
-      transform="-translate-x-50%"
-      bottom={bottom}
-    >
-      <Icon animation="bounce 1s infinite" color="text-primary">
-        <Mouse />
-      </Icon>
-    </Box>
+    <Portal>
+      <Box position="absolute" height="100vh" top="0" padding="layoutPadding">
+        <Icon
+          animation="bounce 1s infinite"
+          color="text-primary"
+          bottom="0"
+          position="absolute"
+        >
+          <Mouse />
+        </Icon>
+      </Box>
+    </Portal>
   );
 }
