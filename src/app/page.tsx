@@ -18,7 +18,9 @@ export default function Home() {
         <Features />
         <BannerAction />
         <Testimonials />
-        <BannerSupport />
+      </Container>
+      <BannerSupport />
+      <Container direction="column" spaceY="page">
         <Pricing />
         <Footer />
       </Container>

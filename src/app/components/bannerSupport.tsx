@@ -2,16 +2,12 @@ import { Button, Container, HStack, Stack, Text } from "@chakra-ui/react";
 
 export default function BannerSupport() {
   return (
-    <Container>
-      <Stack
-        position="absolute"
-        padding="20"
-        gap="stack"
-        alignItems="center"
-        bg="var(--chakra-colors-primary-accent)"
-        marginInlineStart="-16"
-        width="106%"
-      >
+    <Container
+      padding="20"
+      bg="var(--chakra-colors-primary-accent)"
+      marginY="page"
+    >
+      <Stack gap="stack" alignItems="center">
         <Text fontSize="5xl" fontWeight="bold">
           Ready to Transform Your Support?
         </Text>
