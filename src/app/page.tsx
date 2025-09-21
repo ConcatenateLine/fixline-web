@@ -5,6 +5,7 @@ import Footer from "@app/components/footer";
 import HeaderBar from "@app/components/headerBar";
 import HeroSection from "@app/components/heroSection";
 import Pricing from "@app/components/pricing";
+import Companies from "@app/components/companies";
 import Testimonials from "@app/components/testimonials";
 import { Box, Container } from "@chakra-ui/react";
 import ScrollIndicator from "@components/interactions/ScrollIndicator";
@@ -22,6 +23,7 @@ export default function Home() {
       <BannerSupport />
       <Container direction="column" spaceY="page">
         <Pricing />
+        <Companies />
         <Footer />
       </Container>
       <ScrollIndicator />
