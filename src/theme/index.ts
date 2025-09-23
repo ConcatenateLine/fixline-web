@@ -368,6 +368,10 @@ const config = defineConfig({
         },
       },
       spacing: {
+        headerBar: {
+          value: "spacing.10",
+          description: "Height of the header bar",
+        },
         page: {
           value: "spacing.12",
           description:

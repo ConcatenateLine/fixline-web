@@ -12,15 +12,15 @@ import {
 import BackgroundBlur from "@components/ui/backgroundBlur";
 import BaseContainer from "@components/ui/baseContainer";
 
-export default function SignInPage() {
+export default function RegisterPage() {
   return (
     <BaseContainer
       props={{
-        alignItems: "center",
-        justifyContent: "center",
         width: "full",
         height: "full",
         zIndex: "0",
+        alignItems: "center",
+        justifyContent: "center",
         display: "flex",
       }}
     >
@@ -30,7 +30,7 @@ export default function SignInPage() {
       />
       <VStack alignItems="start" gap="stack" width="xl">
         <Text color="text-primary" fontSize="5xl">
-          Sign In to Fixline
+          Create an account
         </Text>
         <Grid templateColumns="repeat(4, 1fr)" width="full" gap="listItem">
           <Button variant="outline" width="full" colorScheme="light">
@@ -69,19 +69,20 @@ export default function SignInPage() {
             </Field.Label>
             <Input placeholder="me@example.com" color="text-primary" />
           </Field.Root>
-          <Button type="submit">Sign In</Button>
         </VStack>
         <VStack alignItems="start">
           <HStack>
-            <Text color="text-primary">Need an account?</Text>
-            <Link href="/register" color="link">
-              Sign Up
-            </Link>
+            <Text color="text-primary">
+              By signing up you agree to our{" "}
+              <Link color="link">terms of service</Link> and{" "}
+              <Link color="link">privacy policy</Link>.
+            </Text>
           </HStack>
+          <Button type="submit">Sign Up</Button>
           <HStack>
-            <Text color="text-primary">Forgot your password?</Text>
-            <Link href="/signUp" color="link">
-              Reset Password
+            <Text color="text-primary">Already have an account?</Text>
+            <Link href="/signIn" color="link">
+              Sign In
             </Link>
           </HStack>
         </VStack>

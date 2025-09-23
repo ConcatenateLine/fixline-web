@@ -1,9 +1,17 @@
-import HeaderBarMenuItem from "@app/components/headerBarMenuItem";
+"use client";
+
 import { Button, Container, HStack, Link } from "@chakra-ui/react";
 import CombinationMark from "@components/brand/combinationMark";
 import { ColorModeButton } from "@components/ui/color-mode";
+import { usePathname } from "next/navigation";
 
-export default function HeaderBar() {
+export default function CleanBar() {
+  const pathname = usePathname();
+
+  const showOption = (path: string) => {
+    return pathname === path ? "none" : "inline";
+  };
+
   return (
     <Container
       height="headerBar"
@@ -26,21 +34,15 @@ export default function HeaderBar() {
         <CombinationMark />
       </Link>
 
-      <HStack gap="stack">
-        <HeaderBarMenuItem label="Home" href="#home" />
-        <HeaderBarMenuItem label="Features" href="#features" />
-        <HeaderBarMenuItem label="How it works" href="#how-it-works" />
-        <HeaderBarMenuItem label="Testimonials" href="#testimonials" />
-        <HeaderBarMenuItem label="Pricing" href="#pricing" />
-      </HStack>
+      <HStack gap="stack"></HStack>
 
       <HStack paddingY="iconPadding">
-        <Link href="/signIn">
+        <Link href="/signIn" display={showOption("/signIn")}>
           <Button variant="outline" rounded="full" borderWidth="2px">
             Sign In
           </Button>
         </Link>
-        <Link href="/register">
+        <Link href="/register" display={showOption("/register")}>
           <Button variant="solid">Get Started</Button>
         </Link>
         <ColorModeButton />
